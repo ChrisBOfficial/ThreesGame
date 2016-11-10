@@ -18,7 +18,7 @@ public class Threes {
         String answer = scan.nextLine();        //Simple yes or no
 
         if (answer.contains("Y") || (answer.contains("y"))) {
-            System.out.println("OK, want to know how it works?");
+            System.out.println("OK, want to know how it works? Y/N");
             String answer2 = scan.nextLine();
             if (answer2.contains("n") || (answer2.contains("N"))) {
                 System.out.println("OK, Enter a single number.");
