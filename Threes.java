@@ -25,7 +25,7 @@ public class Threes {
 
                 int mistake = 0;    //Used as a counter for number of division mistakes made
                 int numstart = scan.nextInt();  //First number input
-                int current = numstart;     //Current number displayed starts as the first number
+                int current = numstart;     //Current number displayed - starts as the first number
 
                 System.out.println("Enter 1 or -1 if you're adding or subtracting, and 0 to divide.");
                 System.out.println(numstart);       //Displays first number input
@@ -64,8 +64,21 @@ public class Threes {
                 System.out.println("You Win! Mistakes: " + mistake + "\n");        //Will display a win condition, and amount of division errors
                 System.out.println("Thank you for playing Threes \n - Chris Burbach");
             }
+            scan.nextLine();
+            System.out.println("Credits? Y/N");
+            String credits = scan.nextLine();
+
+            if(credits.contains("Y")||credits.contains("y"))
+            {
+                System.out.println("\n***********************************************************************");
+                System.out.println("*Threes: a game of dividing by three - inspired by my boredom in class*");
+                System.out.println("***********************************************************************");
+            }
+            else
+                System.out.println("OK, have a nice day.");
             if (answer2.contains("Y") || answer2.contains("y")) {
-                System.out.println("OK, you first will enter a number, and then either enter '1' or '-1' to add or subtract 1 respectively. Or you can enter '0' to divide by three. The goal is to get your number down to '1' in as little steps as possible.");
+                System.out.println("OK, you first will enter a number, and then either enter '1' or '-1' to add or subtract 1 respectively. " +
+                                   "\nOr you can enter '0' to divide by three. The goal is to get your number down to '1' in as little steps as possible.");
                 System.out.println(" \nEnter a single number.");
 
                 int mistake = 0;    //Used as a counter for number of division mistakes made
@@ -109,6 +122,18 @@ public class Threes {
                 System.out.println("You Win! Mistakes: " + mistake + "\n");        //Will display a win condition, and amount of division errors
                 System.out.println("Thank you for playing Threes \n - Chris Burbach");
             }
+            scan.nextLine();
+            System.out.println("Credits? Y/N");
+            String credits2 = scan.nextLine();
+
+            if(credits2.contains("Y")||credits2.contains("y"))
+            {
+                System.out.println("\n***********************************************************************");
+                System.out.println("*Threes: a game of dividing by three - inspired by my boredom in class*");
+                System.out.println("***********************************************************************");
+            }
+            else
+                System.out.println("OK, have a nice day.");
         }
         if (answer.contains("N") || answer.contains("n"))
             System.out.println("Okay, have a nice day.");
