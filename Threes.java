@@ -21,6 +21,7 @@ public class Threes {
             if (answer.contains("Y") || (answer.contains("y"))) {
                 System.out.println("OK, want to know the rules? Y/N");
                 String answer2 = scan.nextLine();
+                int step = 0;
                 if (answer2.contains("n") || (answer2.contains("N"))) {
                     System.out.println("Alright what difficulty?\n1   2   3   or   Custom (4)");
                     int difficulty = scan.nextInt();
@@ -38,11 +39,13 @@ public class Threes {
                         while (current != 1) {      //The game will run until the number '1' is reached
                             if (input == 1) {       //If '1' is input, add one to the number, and display new number
                                 current++;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
                             if (input == -1) {      //If '-1' is input, subtract one from the number, and display new number
                                 current--;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
@@ -50,10 +53,12 @@ public class Threes {
                                 if (current % 3 != 0 && current != 1) {     //If you can't divide by three, try again
                                     System.out.println("Try again.");
                                     mistake++;
+                                    step++;
                                     input = scan.nextInt();
                                 }
                                 if (current % 3 == 0) {     //If you can divide, do it and display new number
                                     current = current / 3;
+                                    step++;
                                     System.out.println(current);
                                     input = scan.nextInt();
                                 }
@@ -65,7 +70,7 @@ public class Threes {
                                 input = scan.nextInt();
                             }
                         }
-                        System.out.println("You Win! Mistakes: " + mistake + "\n");        //Will display a win condition, and amount of division errors
+                        System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");        //Will display a win condition, and amount of division errors
                         System.out.println("Thank you for playing Threes \n - Chris Burbach");
                         scan.nextLine();
                         System.out.println("Credits? Y/N");
@@ -74,7 +79,7 @@ public class Threes {
                         if (credits.contains("Y") || credits.contains("y")) {
                             System.out.println("\n***********************************************************************");
                             System.out.println("*Threes: a game of dividing by three - inspired by my boredom in class*");
-                            System.out.println("***********************************************************************");
+                            System.out.println("***********************************************************************\n");
                             System.out.println("Press r to play again?");
                             again = scan.nextLine();
                         } else
@@ -98,22 +103,26 @@ public class Threes {
                         while (current != 1) {      //The game will run until the number '1' is reached
                             if (input == 1) {       //If '1' is input, add one to the number, and display new number
                                 current++;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
                             if (input == -1) {      //If '-1' is input, subtract one from the number, and display new number
                                 current--;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
                             if (input == 0) {       //If '0' is input, try to divide
                                 if (current % 3 != 0 && current != 1) {     //If you can't divide by three, try again
                                     System.out.println("Try again.");
+                                    step++;
                                     mistake++;
                                     input = scan.nextInt();
                                 }
                                 if (current % 3 == 0) {     //If you can divide, do it and display new number
                                     current = current / 3;
+                                    step++;
                                     System.out.println(current);
                                     input = scan.nextInt();
                                 }
@@ -125,7 +134,7 @@ public class Threes {
                                 input = scan.nextInt();
                             }
                         }
-                        System.out.println("You Win! Mistakes: " + mistake + "\n");        //Will display a win condition, and amount of division errors
+                        System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");        //Will display a win condition, and amount of division errors
                         System.out.println("Thank you for playing Threes \n - Chris Burbach");
                         scan.nextLine();
                         System.out.println("Credits? Y/N");
@@ -134,7 +143,7 @@ public class Threes {
                         if (credits.contains("Y") || credits.contains("y")) {
                             System.out.println("\n***********************************************************************");
                             System.out.println("*Threes: a game of dividing by three - inspired by my boredom in class*");
-                            System.out.println("***********************************************************************");
+                            System.out.println("***********************************************************************\n");
                             System.out.println("Press r to play again?");
                             again = scan.nextLine();
                         } else
@@ -159,11 +168,13 @@ public class Threes {
                         while (current != 1) {      //The game will run until the number '1' is reached
                             if (input == 1) {       //If '1' is input, add one to the number, and display new number
                                 current++;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
                             if (input == -1) {      //If '-1' is input, subtract one from the number, and display new number
                                 current--;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
@@ -171,10 +182,12 @@ public class Threes {
                                 if (current % 3 != 0 && current != 1) {     //If you can't divide by three, try again
                                     System.out.println("Try again.");
                                     mistake++;
+                                    step++;
                                     input = scan.nextInt();
                                 }
                                 if (current % 3 == 0) {     //If you can divide, do it and display new number
                                     current = current / 3;
+                                    step++;
                                     System.out.println(current);
                                     input = scan.nextInt();
                                 }
@@ -186,7 +199,7 @@ public class Threes {
                                 input = scan.nextInt();
                             }
                         }
-                        System.out.println("You Win! Mistakes: " + mistake + "\n");        //Will display a win condition, and amount of division errors
+                        System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");        //Will display a win condition, and amount of division errors
                         System.out.println("Thank you for playing Threes \n - Chris Burbach");
                         scan.nextLine();
                         System.out.println("Credits? Y/N");
@@ -195,7 +208,7 @@ public class Threes {
                         if (credits.contains("Y") || credits.contains("y")) {
                             System.out.println("\n***********************************************************************");
                             System.out.println("*Threes: a game of dividing by three - inspired by my boredom in class*");
-                            System.out.println("***********************************************************************");
+                            System.out.println("***********************************************************************\n");
                             System.out.println("Press r to play again?");
                             again = scan.nextLine();
                         } else
@@ -219,22 +232,26 @@ public class Threes {
                         while (current != 1) {      //The game will run until the number '1' is reached
                             if (input == 1) {       //If '1' is input, add one to the number, and display new number
                                 current++;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
                             if (input == -1) {      //If '-1' is input, subtract one from the number, and display new number
                                 current--;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
                             if (input == 0) {       //If '0' is input, try to divide
                                 if (current % 3 != 0 && current != 1) {     //If you can't divide by three, try again
                                     System.out.println("Try again.");
+                                    step++;
                                     mistake++;
                                     input = scan.nextInt();
                                 }
                                 if (current % 3 == 0) {     //If you can divide, do it and display new number
                                     current = current / 3;
+                                    step++;
                                     System.out.println(current);
                                     input = scan.nextInt();
                                 }
@@ -246,7 +263,7 @@ public class Threes {
                                 input = scan.nextInt();
                             }
                         }
-                        System.out.println("You Win! Mistakes: " + mistake + "\n");        //Will display a win condition, and amount of division errors
+                        System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");        //Will display a win condition, and amount of division errors
                         System.out.println("Thank you for playing Threes \n - Chris Burbach");
                         scan.nextLine();
                         System.out.println("Credits? Y/N");
@@ -255,7 +272,7 @@ public class Threes {
                         if (credits.contains("Y") || credits.contains("y")) {
                             System.out.println("\n***********************************************************************");
                             System.out.println("*Threes: a game of dividing by three - inspired by my boredom in class*");
-                            System.out.println("***********************************************************************");
+                            System.out.println("***********************************************************************\n");
                             System.out.println("Press r to play again?");
                             again = scan.nextLine();
                         } else
@@ -268,7 +285,8 @@ public class Threes {
                 }
                 if (answer2.contains("Y") || answer2.contains("y")) {
                     System.out.println("\nOK, you first will enter a number, and then either enter '1' or '-1' to add or subtract 1 respectively. " +
-                            "\nOr you can enter '0' to divide by three. The goal is to get your number down to '1' in as little steps as possible.");
+                            "\nOr you can enter '0' to divide by three. The goal is to get your number down to '1' in as little steps as possible." +
+                            "\nEnter '0' to confirm once you've reached '1'");
                     System.out.println("\nAlright, what difficulty?\n1   2   3   or   Custom (4)");
                     int difficulty = scan.nextInt();
                     if (difficulty == 1) {
@@ -285,11 +303,13 @@ public class Threes {
                         while (current != 1) {      //The game will run until the number '1' is reached
                             if (input == 1) {       //If '1' is input, add one to the number, and display new number
                                 current++;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
                             if (input == -1) {      //If '-1' is input, subtract one from the number, and display new number
                                 current--;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
@@ -297,10 +317,12 @@ public class Threes {
                                 if (current % 3 != 0 && current != 1) {     //If you can't divide by three, try again
                                     System.out.println("Try again.");
                                     mistake++;
+                                    step++;
                                     input = scan.nextInt();
                                 }
                                 if (current % 3 == 0) {     //If you can divide, do it and display new number
                                     current = current / 3;
+                                    step++;
                                     System.out.println(current);
                                     input = scan.nextInt();
                                 }
@@ -312,7 +334,7 @@ public class Threes {
                                 input = scan.nextInt();
                             }
                         }
-                        System.out.println("You Win! Mistakes: " + mistake + "\n");        //Will display a win condition, and amount of division errors
+                        System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");        //Will display a win condition, and amount of division errors
                         System.out.println("Thank you for playing Threes \n - Chris Burbach");
                         scan.nextLine();
                         System.out.println("Credits? Y/N");
@@ -321,7 +343,7 @@ public class Threes {
                         if (credits.contains("Y") || credits.contains("y")) {
                             System.out.println("\n***********************************************************************");
                             System.out.println("*Threes: a game of dividing by three - inspired by my boredom in class*");
-                            System.out.println("***********************************************************************");
+                            System.out.println("***********************************************************************\n");
                             System.out.println("Press r to play again?");
                             again = scan.nextLine();
                         } else
@@ -345,11 +367,13 @@ public class Threes {
                         while (current != 1) {      //The game will run until the number '1' is reached
                             if (input == 1) {       //If '1' is input, add one to the number, and display new number
                                 current++;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
                             if (input == -1) {      //If '-1' is input, subtract one from the number, and display new number
                                 current--;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
@@ -357,10 +381,12 @@ public class Threes {
                                 if (current % 3 != 0 && current != 1) {     //If you can't divide by three, try again
                                     System.out.println("Try again.");
                                     mistake++;
+                                    step++;
                                     input = scan.nextInt();
                                 }
                                 if (current % 3 == 0) {     //If you can divide, do it and display new number
                                     current = current / 3;
+                                    step++;
                                     System.out.println(current);
                                     input = scan.nextInt();
                                 }
@@ -372,7 +398,7 @@ public class Threes {
                                 input = scan.nextInt();
                             }
                         }
-                        System.out.println("You Win! Mistakes: " + mistake + "\n");        //Will display a win condition, and amount of division errors
+                        System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");        //Will display a win condition, and amount of division errors
                         System.out.println("Thank you for playing Threes \n - Chris Burbach");
                         scan.nextLine();
                         System.out.println("Credits? Y/N");
@@ -381,7 +407,7 @@ public class Threes {
                         if (credits.contains("Y") || credits.contains("y")) {
                             System.out.println("\n***********************************************************************");
                             System.out.println("*Threes: a game of dividing by three - inspired by my boredom in class*");
-                            System.out.println("***********************************************************************");
+                            System.out.println("***********************************************************************\n");
                             System.out.println("Press r to play again?");
                             again = scan.nextLine();
                         } else
@@ -405,11 +431,13 @@ public class Threes {
                         while (current != 1) {      //The game will run until the number '1' is reached
                             if (input == 1) {       //If '1' is input, add one to the number, and display new number
                                 current++;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
                             if (input == -1) {      //If '-1' is input, subtract one from the number, and display new number
                                 current--;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
@@ -417,10 +445,12 @@ public class Threes {
                                 if (current % 3 != 0 && current != 1) {     //If you can't divide by three, try again
                                     System.out.println("Try again.");
                                     mistake++;
+                                    step++;
                                     input = scan.nextInt();
                                 }
                                 if (current % 3 == 0) {     //If you can divide, do it and display new number
                                     current = current / 3;
+                                    step++;
                                     System.out.println(current);
                                     input = scan.nextInt();
                                 }
@@ -432,7 +462,7 @@ public class Threes {
                                 input = scan.nextInt();
                             }
                         }
-                        System.out.println("You Win! Mistakes: " + mistake + "\n");        //Will display a win condition, and amount of division errors
+                        System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");        //Will display a win condition, and amount of division errors
                         System.out.println("Thank you for playing Threes \n - Chris Burbach");
                         scan.nextLine();
                         System.out.println("Credits? Y/N");
@@ -441,7 +471,7 @@ public class Threes {
                         if (credits.contains("Y") || credits.contains("y")) {
                             System.out.println("\n***********************************************************************");
                             System.out.println("*Threes: a game of dividing by three - inspired by my boredom in class*");
-                            System.out.println("***********************************************************************");
+                            System.out.println("***********************************************************************\n");
                             System.out.println("Press r to play again?");
                             again = scan.nextLine();
                         } else
@@ -465,11 +495,13 @@ public class Threes {
                         while (current != 1) {      //The game will run until the number '1' is reached
                             if (input == 1) {       //If '1' is input, add one to the number, and display new number
                                 current++;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
                             if (input == -1) {      //If '-1' is input, subtract one from the number, and display new number
                                 current--;
+                                step++;
                                 System.out.println(current);
                                 input = scan.nextInt();
                             }
@@ -477,10 +509,12 @@ public class Threes {
                                 if (current % 3 != 0 && current != 1) {     //If you can't divide by three, try again
                                     System.out.println("Try again.");
                                     mistake++;
+                                    step++;
                                     input = scan.nextInt();
                                 }
                                 if (current % 3 == 0) {     //If you can divide, do it and display new number
                                     current = current / 3;
+                                    step++;
                                     System.out.println(current);
                                     input = scan.nextInt();
                                 }
@@ -492,7 +526,7 @@ public class Threes {
                                 input = scan.nextInt();
                             }
                         }
-                        System.out.println("You Win! Mistakes: " + mistake + "\n");        //Will display a win condition, and amount of division errors
+                        System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");        //Will display a win condition, and amount of division errors
                         System.out.println("Thank you for playing Threes \n - Chris Burbach");
                         scan.nextLine();
                         System.out.println("Credits? Y/N");
@@ -501,7 +535,7 @@ public class Threes {
                         if (credits.contains("Y") || credits.contains("y")) {
                             System.out.println("\n***********************************************************************");
                             System.out.println("*Threes: a game of dividing by three - inspired by my boredom in class*");
-                            System.out.println("***********************************************************************");
+                            System.out.println("***********************************************************************\n");
                             System.out.println("Press r to play again?");
                             again = scan.nextLine();
                         } else
@@ -513,7 +547,6 @@ public class Threes {
                     }
                 }
             }
-
             if (answer.contains("N") || answer.contains("n"))
                 System.out.println("Okay, have a nice day.");
         }
