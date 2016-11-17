@@ -15,13 +15,14 @@ class ThreesGame {
 
 		Scanner scan = new Scanner(System.in);
 		String again = "a";
-		String answer;
 
 		do {
+			String answer;
 			for (int i = 0; i < 100; i++)
 				System.out.println();
 			System.out.println("Which game would you like to play?\n3       7       11");
 			int practice = scan.nextInt();
+			String score = "null";
 			if (practice == 3) {
 				System.out.println("Ready to begin?");
 				scan.nextLine();
@@ -75,13 +76,24 @@ class ThreesGame {
 									}
 								}
 								if (input == 69 || input == 666)     //Cheat code! If you input 69 or 666, you automatically win
+								{
+									step = 0;
 									break;
+								}
 								if (input > 1 || input < -1) {        //If input is not valid, try again and display error
 									System.out.println("Error - wrong input.");
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 7)
+								score = "Great";
+							if(step < 15)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");
 							System.out.println("Thank you for playing Threes \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
@@ -146,7 +158,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 7)
+								score = "Great";
+							if(step < 15)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");
 							System.out.println("Thank you for playing Threes \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
@@ -211,7 +231,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 7)
+								score = "Great";
+							if(step < 15)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");
 							System.out.println("Thank you for playing Threes \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
@@ -276,7 +304,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 7)
+								score = "Great";
+							if(step < 15)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");
 							System.out.println("Thank you for playing Threes \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
@@ -352,7 +388,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 7)
+								score = "Great";
+							if(step < 15)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");
 							System.out.println("Thank you for playing Threes \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
@@ -417,7 +461,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 7)
+								score = "Great";
+							if(step < 15)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");
 							System.out.println("Thank you for playing Threes \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
@@ -482,8 +534,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Threes \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 7)
+								score = "Great";
+							if(step < 15)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");							System.out.println("Thank you for playing Threes \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -547,8 +606,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Threes \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 7)
+								score = "Great";
+							if(step < 15)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");							System.out.println("Thank you for playing Threes \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -633,8 +699,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Sevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");							System.out.println("Thank you for playing Sevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -702,8 +775,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");        //
-							System.out.println("Thank you for playing Sevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Sevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -771,8 +851,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Sevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Sevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -840,8 +927,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Sevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Sevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -920,8 +1014,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Sevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Sevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -989,8 +1090,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Sevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Sevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1058,8 +1166,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Sevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Sevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1127,8 +1242,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Sevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Sevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1217,8 +1339,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Elevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Elevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1286,8 +1415,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Elevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Elevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1355,8 +1491,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Elevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Elevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1424,8 +1567,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Sevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Sevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1504,8 +1654,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Elevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Elevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1573,8 +1730,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Elevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Elevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1642,8 +1806,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Elevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Elevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1711,8 +1882,15 @@ class ThreesGame {
 									input = scan.nextInt();
 								}
 							}
-							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\n");
-							System.out.println("Thank you for playing Elevens \n - Chris Burbach");
+							if(step == 0)
+								score = "Cheater";
+							if(step < 11)
+								score = "Great";
+							if(step < 19)
+								score = "Par";
+							if(step < 25)
+								score = "Lacking";
+							System.out.println("You Win! Mistakes: " + mistake + " Steps: " + step + "\nScore: " + score + "\n");									System.out.println("Thank you for playing Elevens \n - Chris Burbach");
 							scan.nextLine();
 							System.out.println("Credits?");
 							String credits = scan.nextLine();
@@ -1744,11 +1922,6 @@ class ThreesGame {
 					System.out.println("Okay, have a nice day.");
 					again = "a";
 				}
-				String he = "bitch";
-				if(he.equals("bitch"))
-					he = "shot";
-				if(he.equals("bitch"))
-					System.out.println("\n");
 			}
 		}
 		while (again.contains("r"));
